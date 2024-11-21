@@ -1,0 +1,10 @@
+{
+    "require": {
+        "php": ">=8.0",
+        "symfony/http-client": "6.*",
+        "nette/utils": "^4.0",
+        "nette/di": "3.*",
+        "symfony/mime": "6.0.19",
+        "nette/caching": "3.*"
+    }
+}
