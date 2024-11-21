@@ -1,4 +1,6 @@
 {
+    "name": "ulovdomov/digitoo",
+    "description": "Ulovdomov digitoo sdk",
     "require": {
         "php": ">=8.0",
         "symfony/http-client": "6.*",
