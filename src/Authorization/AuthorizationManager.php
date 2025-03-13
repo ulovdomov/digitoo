@@ -8,5 +8,7 @@ interface AuthorizationManager
 
 	public function saveAccessToken(AccessTokenDTO $accessToken): void;
 
+	public function clearAccessToken(): void;
+
 	public function getAuthorizationBody(): string;
 }

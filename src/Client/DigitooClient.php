@@ -76,6 +76,13 @@ final class DigitooClient
 		}
 
 		try {
+
+			if ($response->getStatusCode() === 401) {
+				$this->authorizationManager->clearAccessToken();
+				$options->setAuthBearer($this->getAccessToken()->getAccessToken());
+				$response = $client->request($method, $url, $options->toArray());
+			}
+
 			if ($response->getStatusCode() !== 200 && $response->getStatusCode() !== 201) {
 				$content = $response->toArray(false);
 

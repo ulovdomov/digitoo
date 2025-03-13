@@ -53,6 +53,11 @@ final class CacheAuthorizationManager implements AuthorizationManager
 		$this->cache->save(self::ACCESS_TOKEN_CACHE_KEY, $accessToken->toJson());
 	}
 
+	public function clearAccessToken(): void
+	{
+		$this->cache->remove(self::ACCESS_TOKEN_CACHE_KEY);
+	}
+
 	/**
 	 * @throws JsonException
 	 */
